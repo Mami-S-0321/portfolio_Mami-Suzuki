@@ -34,69 +34,149 @@ body {
 .about p {
 	margin-bottom: 3rem;
 }
+
 /*表題の動く記述*/
 .text-wrap {
-  display: flex;
-  gap: 8px;
+	display: flex;
+	gap: 2.5rem;
+	font-size: 50px;
+	font-family: fantasy;
+	margin: 4rem;
+	padding-top: 8rem;
+	padding-bottom: 4rem;
+
 }
 
 .text-wrap:hover .letter {
-  animation: sway 0.4s calc(0.04s * var(--index));
+	animation: sway 0.4s calc(0.04s * var(--index));
 }
 
 @keyframes sway {
-  0% {
-    transform: translateY(0);
-  }
-  25% {
-    transform: translateY(-0.2em);
-  }
-  50% {
-    transform: translateX(0.5em);
-    color: transparent;
-  }
-  100% {
-    transform: translateY(0);
-  }
+	0% {
+		transform: translateY(0);
+	}
+
+	25% {
+		transform: translateY(-0.2em);
+	}
+
+	50% {
+		transform: translateX(0.5em);
+		color: transparent;
+	}
+
+	100% {
+		transform: translateY(0);
+	}
 }
 
 /* ヘッダー*/
 .page-header {
-	padding-left: 10%;
+	padding-top: 4%;
+	padding-left: 15%;
 	padding-right: 10%;
-	padding-bottom: 2%;
+	padding-bottom: 4%;
+
 	background-color: rgb(240, 245, 135);
 }
 
 .main-nav {
 	display: flex;
-	gap: 15rem;
+	gap: 14rem;
 	list-style: none;
 	font-family: cursive;
-
+	color: black;
+	list-style-position: inside;
 
 }
 
-.main-nav a {
-	color: #432;
+.main-nav a:hover {
+	color: blue;
 }
+
 
 /* ヘッダーカバー画像*/
 
 
 
 /* HOME*/
-.cover {
+.heading-large {
 	background-size: cover;
 	background-position: center bottom;
 	height: 100px;
+	margin-top: 10rem;
 }
 
-.Achievement {
-	display: grid;
-	gap: 2rem 1.5rem;
-	grid-template-columns: repeat(2, 1fr);
-	text-align: center;
+.Result {
+	display: flex;
+	justify-content:space-evenly;
+	list-style: none;
+	
+}
+
+.book {
+	
+	width: 100px;
+	height: 100px;
+	
+	
+
+}
+
+.memo {
+	background-color: azure;
+	padding: 10%;
+
+
+}
+
+/*グラフ*/
+.bar-chart-002 {
+	font-size: 1.2em;
+	padding: 0% 10% 0% 10%;
+
+}
+
+.bar-chart-002>div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+}
+
+.bar-chart-002 dt {
+	width: 110px;
+
+}
+
+.bar-chart-002 dd {
+	width: 80%;
+	margin: 0;
+	border-radius: 4px;
+	background-color: #f2f2f2;
+}
+
+.bar-chart-002 span {
+	display: inline-block;
+	padding-right: 15px;
+	border-radius: inherit;
+	background-color: #2589d0;
+	color: #fff;
+	font-weight: 600;
+	line-height: 45px;
+	text-align: right;
+	white-space: nowrap;
+	animation: anima-bar-chart-002 1.2s ease;
+}
+
+@keyframes anima-bar-chart-002 {
+	from {
+		width: 0;
+	}
+}
+
+.skill-guide {
+	padding: 0% 10% 0% 20%;
+	font-size: 20px;
 }
 
 /* フッター*/
@@ -131,15 +211,7 @@ body {
 	color: rgb(0, 64, 128);
 }
 
-.book {
-	display: grid;
-	width: 100px;
-	height: 100px;
-	margin-left: 50%;
-	padding: 2rem 10;
-	margin-top: 1rem;
 
-}
 
 /* デスクトップ版*/
 @media (min-width: 800px) {
@@ -147,13 +219,14 @@ body {
 	/* 見出し */
 	.heading-large {
 		font-size: 4rem;
+		padding-bottom: 4%;
 	}
 
 	/* ヘッダー */
 	.page-header {
 		display: flex;
 		justify-content: space-between;
-		padding-top: 1.5rem;
+		padding-top: 2.5rem;
 	}
 
 	.main-nav {
