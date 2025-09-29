@@ -90,9 +90,7 @@ body {
 
 }
 
-.main-nav a:hover {
-	color: blue;
-}
+
 
 
 /* ヘッダーカバー画像*/
@@ -257,3 +255,6 @@ body {
 		color: #FF0000;
 		font-weight: bold;
 	}
+	
+	
+	
